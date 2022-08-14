@@ -1,2 +1,2 @@
 # DevPhpSql
-development ground for php oop/framework and sql
+Playground for testing PHP OOP/Framework and SQL
