@@ -22,7 +22,26 @@ routes/web.php
 Default View Page
 resources/views/welcome.blade.php
 
+Command to find Laravel Version
+Artisan is a powerful command-line interface included with Laravel.
+Open the command line terminal on your system. Navigate to your Laravel application directory.
+Then execute the following PHP artisan command to check the Laravel version.
+php artisan --version
 
+Route
+import your controller to routes
+use App\Http\Controllers\MenuController;
+use this to go to controller spesific function
+Route::get('/landing', [MenuController::class, 'landing']);
+
+Make Controller
+php artisan make:controller MenuController
+
+Make View
+use emmet !
+view can be create manually
+CSS in head
+JS in bottom body
 
 
 
@@ -41,5 +60,12 @@ Run php artisan key:generate
 Run php artisan migrate
 Run php artisan serve
 Go to http://localhost:8000/
+---------------------------------------------------
+Authorization
+Authentication
+Login Logout Register
+Session
+CRUD
+---------------------------------------------------
 
 
