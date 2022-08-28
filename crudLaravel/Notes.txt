@@ -63,6 +63,31 @@ contents
 Seed
 php artisan db:seed --class=KontakSeeder
 
+Connect Database
+.env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_crudlaravel
+DB_USERNAME=root
+DB_PASSWORD=
+
+Check Connection
+https://laravel.com/docs/9.x/artisan#tinker
+php artisan tinker
+if(DB::connection()->getPdo()){echo "Connected to Database! " . "Database : " . DB::connection()->getDatabaseName();}
+
+Migrate Schema
+php artisan migrate
+
+Seeding
+add this to beginning use Illuminate\Support\Facades\DB;
+php artisan make:seeder usersSeed
+
+Run Seeding
+php artisan db:seed --class=usersSeed
+
+
 
 
 
