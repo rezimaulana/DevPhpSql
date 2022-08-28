@@ -20,4 +20,4 @@ Route::get('/', function () {
 
 Route::get('/landing', [MenuController::class, 'landing']);
 Route::get('/info', [MenuController::class, 'info']);
-Route::get('/student', [MenuController::class, 'data']);
+Route::get('/student', [MenuController::class, 'student']);

@@ -43,6 +43,25 @@ view can be create manually
 CSS in head
 JS in bottom body
 
+Blade Template
+@yield
+@section
+@extends
+@include
+https://laravel.com/docs/9.x/blade
+https://www.youtube.com/watch?v=j7PQYHpFQJs
+https://stackoverflow.com/questions/29070456/laravel-difference-between-yield-and-section
+https://stackoverflow.com/questions/42327469/laravel-load-multiple-view-in-a-single-function
+layout app
+app
+components
+-header
+-footer
+-navigations
+contents
+
+Seed
+php artisan db:seed --class=KontakSeeder
 
 
 

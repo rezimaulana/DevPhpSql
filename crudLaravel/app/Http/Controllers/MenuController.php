@@ -8,12 +8,12 @@ class MenuController extends Controller
 {
     //
     public function landing(){
-        return view('landing');
+        return view('contents/landing');
     }
     public function info(){
-        return view('info');
+        return view('contents/info');
     }
     public function student(){
-        return view('student');
+        return view('contents/student');
     }
 }
