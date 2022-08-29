@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('student', StudentController::class)->middleware('can:isAdmin');
 Route::resource('student', StudentController::class)->only('show')->middleware('can:isAdminStudent');
+
+Route::resource('user', UserController::class)->middleware('can:isAdmin');

@@ -37,6 +37,11 @@
                         <li>
                             <a href="{{ url('/info') }}" class="nav-link">Information</a>
                         </li>
+                        @can('isAdmin')
+                        <li>
+                            <a href="{{ url('/user') }}" class="nav-link">User Management</a>
+                        </li>
+                        @endcan
                     </ul>
 
                     <!-- Right Side Of Navbar -->

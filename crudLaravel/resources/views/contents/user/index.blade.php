@@ -3,27 +3,25 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h3>Student Data</h3>
+            <h3>User Data</h3>
         </div>
         <div class="card-body">
-            <a href="{{ route('student.create') }}" class="btn btn-info">Create Student</a>
             <table class="table table-bordered table-striped mt-4">
                 <tr>
                     <th>Name</th>
-                    <th>Student ID</th>
-                    <th>Date of Birth</th>
+                    <th>Role</th>
+                    <th>Email</th>
                     <th>Action</th>
                 </tr>
-                @foreach($student as $s)
+                @foreach($user as $u)
                 <tr>
-                    <td>{{ $s->name }}</td>
-                    <td>{{ $s->studentId }}</td>
-                    <td>{{ $s->dob }}</td>
+                    <td>{{ $u->name }}</td>
+                    <td>{{ $u->role }}</td>
+                    <td>{{ $u->email }}</td>
                     <td>
                         <ul class="nav">
-                            <a href="{{ route ('student.show', $s->id) }}" class="btn btn-success mr-2">Show</a>
-                            <a href="{{ route ('student.edit', $s->id) }}" class="btn btn-primary mr-2">Edit</a>
-                            <form action="{{ route ('student.destroy', $s->id) }}" method="POST">
+                            <a href="{{ route ('user.edit', $u->id) }}" class="btn btn-primary mr-2">Edit</a>
+                            <form action="{{ route ('user.destroy', $u->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
