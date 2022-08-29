@@ -60,9 +60,6 @@ components
 -navigations
 contents
 
-Seed
-php artisan db:seed --class=KontakSeeder
-
 Connect Database
 .env
 DB_CONNECTION=mysql
@@ -85,7 +82,14 @@ add this to beginning use Illuminate\Support\Facades\DB;
 php artisan make:seeder usersSeed
 
 Run Seeding
+php artisan db:seed --class=KontakSeeder
 php artisan db:seed --class=usersSeed
+php artisan db:seed --class=studentsSeed
+
+Remove Seed
+https://stackoverflow.com/questions/44729769/laravel-seed-rollback-after-seeding-database#:~:text=use%20Undo%20Seeder%20for%20Laravel,Undo%20seeds%20run%20seeds%20again.
+delete manual
+php artisan migrate:fresh
 
 FrontEnd Setup Scaffolding
 https://laravel.com/docs/6.x/frontend
@@ -104,6 +108,13 @@ https://stackoverflow.com/questions/65627536/the-token-is-not-a-valid-statement-
 npm install -and npm run dev
 php artisan serve
 
+Make Migrations
+php artisan make:migration create_students_table
+php artisan migrate
+
+Remove Migrations
+https://stackoverflow.com/questions/16871413/safely-remove-migration-in-laravel
+php artisan migrate:rollback
 
 
 
