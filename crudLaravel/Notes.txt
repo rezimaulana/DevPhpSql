@@ -34,15 +34,18 @@ use App\Http\Controllers\MenuController;
 use this to go to controller spesific function
 Route::get('/landing', [MenuController::class, 'landing']);
 
+Check Route Resource
+php artisan route:list
+
 Make Controller
 php artisan make:controller MenuController
 
 Make Controller Crud
-
+php artisan make:controller StudentController --resource
 
 Make Model
 php artisan make:model Student
-
+add protected $table = 'student';
 
 Make View
 use emmet !

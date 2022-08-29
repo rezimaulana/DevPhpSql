@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,10 @@ use App\Http\Controllers\MenuController;
 
 Route::get('/', [MenuController::class, 'landing']);
 Route::get('/info', [MenuController::class, 'info']);
-Route::get('/student', [MenuController::class, 'student']);
+//Route::get('/student', [MenuController::class, 'student']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('student', StudentController::class);
