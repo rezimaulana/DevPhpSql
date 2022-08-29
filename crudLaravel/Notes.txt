@@ -30,6 +30,7 @@ php artisan --version
 
 Route
 import your controller to routes
+always add controller
 use App\Http\Controllers\MenuController;
 use this to go to controller spesific function
 Route::get('/landing', [MenuController::class, 'landing']);
@@ -42,6 +43,7 @@ php artisan make:controller MenuController
 
 Make Controller Crud
 php artisan make:controller StudentController --resource
+use App\Models\Student;
 
 Make Model
 php artisan make:model Student
