@@ -1,8 +1,4 @@
 @extends('layouts.app')
-@section('title', 'Landing')
-@section('navigation')
-@include('components/navigation')
-@endsection
 @section('content')
 <div class="jumbotron text-center">
     <h1>Student Information</h1>

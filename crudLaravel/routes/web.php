@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/landing', [MenuController::class, 'landing']);
 Route::get('/info', [MenuController::class, 'info']);
 Route::get('/student', [MenuController::class, 'student']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

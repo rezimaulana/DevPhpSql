@@ -1,8 +1,4 @@
 @extends('layouts.app')
-@section('title', 'Student')
-@section('navigation')
-@include('components/navigation')
-@endsection
 @section('content')
 <h3>Stundent</h3>
 <table class="table table-striped">

@@ -87,6 +87,22 @@ php artisan make:seeder usersSeed
 Run Seeding
 php artisan db:seed --class=usersSeed
 
+FrontEnd Setup Scaffolding
+https://laravel.com/docs/6.x/frontend
+https://laravel.com/docs/7.x/frontend
+Basic starting point using Bootstrap, React, and / or Vue!
+The Bootstrap and Vue scaffolding provided by Laravel is located in the laravel/ui Composer package.
+Which may be installed using Composer.
+PS E:\xampp\htdocs\DevPhpSql\crudLaravel>
+composer require laravel/ui
+php artisan ui bootstrap --auth
+create app/Http/Controllers/Auth and app/Http/Controllers/HomeController
+modify route/web.php
+add resources/js/bootstrap.js, resources/js/sass, resources/views/auth, resources/views/layouts/app.blade.php
+npm install && npm run dev
+https://stackoverflow.com/questions/65627536/the-token-is-not-a-valid-statement-separator-in-this-version
+npm install -and npm run dev
+php artisan serve
 
 
 

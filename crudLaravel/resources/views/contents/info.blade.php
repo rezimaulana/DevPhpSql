@@ -1,8 +1,4 @@
 @extends('layouts.app')
-@section('title', 'Information')
-@section('navigation')
-@include('components/navigation')
-@endsection
 @section('content')
 <h3>Information</h3>
 <p>August Activity</p>
