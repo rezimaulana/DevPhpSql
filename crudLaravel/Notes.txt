@@ -128,8 +128,11 @@ Remove Migrations
 https://stackoverflow.com/questions/16871413/safely-remove-migration-in-laravel
 php artisan migrate:rollback
 
-
-
+Gate
+https://stackoverflow.com/questions/49748998/how-to-use-authorization-in-lumen
+https://laracasts.com/discuss/channels/lumen/using-authorization-gate-in-lumen
+crudLaravel\app\Providers\AuthServiceProvider.php
+use Illuminate\Support\Facades\Gate;
 
 ---------------------------------------------------
 Cloning from Git

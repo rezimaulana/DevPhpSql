@@ -6,7 +6,9 @@
                 <h3>Student Profile</h3>
             </div>
             <div class="card-body">
+                @can('isAdmin')
                 <a href="{{ route ('student.index') }}" class="btn btn-warning mb-3">Back</a>
+                @endcan
                 <div class="row ml-2">
                     <h4 class="col-12">Name : {{ $student->name }}</h4>
                 </div>

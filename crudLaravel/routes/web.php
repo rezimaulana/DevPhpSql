@@ -27,4 +27,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('student', StudentController::class);
+Route::resource('student', StudentController::class)->middleware('can:isAdmin');
+Route::resource('student', StudentController::class)->only('show')->middleware('can:isAdminStudent');
