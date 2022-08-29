@@ -14,11 +14,11 @@ use App\Http\Controllers\MenuController;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
-Route::get('/landing', [MenuController::class, 'landing']);
+Route::get('/', [MenuController::class, 'landing']);
 Route::get('/info', [MenuController::class, 'info']);
 Route::get('/student', [MenuController::class, 'student']);
 

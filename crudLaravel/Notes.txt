@@ -37,6 +37,13 @@ Route::get('/landing', [MenuController::class, 'landing']);
 Make Controller
 php artisan make:controller MenuController
 
+Make Controller Crud
+
+
+Make Model
+php artisan make:model Student
+
+
 Make View
 use emmet !
 view can be create manually
@@ -83,8 +90,8 @@ php artisan make:seeder usersSeed
 
 Run Seeding
 php artisan db:seed --class=KontakSeeder
-php artisan db:seed --class=usersSeed
-php artisan db:seed --class=studentsSeed
+php artisan db:seed --class=UsersSeed
+php artisan db:seed --class=StudentsSeed
 
 Remove Seed
 https://stackoverflow.com/questions/44729769/laravel-seed-rollback-after-seeding-database#:~:text=use%20Undo%20Seeder%20for%20Laravel,Undo%20seeds%20run%20seeds%20again.
