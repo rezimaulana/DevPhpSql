@@ -27,6 +27,7 @@ class StudentController extends Controller
     public function create()
     {
         //
+        return view('contents/formCreate');
     }
 
     /**
@@ -38,6 +39,12 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
+        Student::create([
+            'name' => $request->name,
+            'studentId' => $request->studentId,
+            'dob' => $request->dob
+        ]);
+        return redirect()->route('student.index');
     }
 
     /**
@@ -49,6 +56,8 @@ class StudentController extends Controller
     public function show($id)
     {
         //
+        $student = Student::where('id', $id)->first();
+        return view('contents/studentProfile', ['student' => $student]);
     }
 
     /**
