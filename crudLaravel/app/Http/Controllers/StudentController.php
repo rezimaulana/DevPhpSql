@@ -16,7 +16,7 @@ class StudentController extends Controller
     {
         //
         $studentData = Student::all();
-        return view('contents/student', ['student' => $studentData]);
+        return view('contents/student/index', ['student' => $studentData]);
     }
 
     /**
@@ -27,7 +27,7 @@ class StudentController extends Controller
     public function create()
     {
         //
-        return view('contents/formCreate');
+        return view('contents/student/formCreate');
     }
 
     /**
@@ -57,7 +57,7 @@ class StudentController extends Controller
     {
         //
         $student = Student::where('id', $id)->first();
-        return view('contents/studentProfile', ['student' => $student]);
+        return view('contents/student/show', ['student' => $student]);
     }
 
     /**
@@ -69,6 +69,8 @@ class StudentController extends Controller
     public function edit($id)
     {
         //
+        $studentData = Student::find($id);
+        return view('contents/student/formEdit', ['student' => $studentData]);
     }
 
     /**
@@ -81,6 +83,12 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $student = Student::find($id);
+        $student->name = $request->name;
+        $student->studentId = $request->studentId;
+        $student->dob = $request->dob;
+        $student->save();
+        return redirect()->route('student.index');
     }
 
     /**
@@ -92,5 +100,8 @@ class StudentController extends Controller
     public function destroy($id)
     {
         //
+        $student = Student::find($id);
+        $student->delete();
+        return redirect()->route('student.index');
     }
 }
