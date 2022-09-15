@@ -80,6 +80,8 @@ DB_PORT=3306
 DB_DATABASE=db_crudlaravel
 DB_USERNAME=root
 DB_PASSWORD=
+error mysql
+https://www.blogon.id/2016/09/mengatasi-error-mysql-shutdown.html
 
 Check Connection
 https://laravel.com/docs/9.x/artisan#tinker
